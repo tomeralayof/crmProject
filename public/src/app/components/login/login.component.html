@@ -1,0 +1,40 @@
+<app-main-navbar></app-main-navbar>
+<div id="container">
+
+<div class="title">
+  <h1 class="header">Log-In Royal System</h1>
+</div>
+
+
+<form class="formCreateAccount" [formGroup]="myform">
+
+  <!--email-->
+  <label for="email">Email</label>
+<input id="text-box1" type="text" formControlName="email" name="email">
+
+<span class="red1" *ngIf="email.invalid && email.touched && email.hasError('required')">email is required</span>
+<span class="red1" *ngIf="email.invalid && email.touched && email.hasError('email')">email must be a valid mail</span>
+<span class="red1" *ngIf="email.invalid && email.touched && email.hasError('minlength')">email must be at least 6 characters long</span>
+<span class="red1" *ngIf="email.invalid && email.touched && email.hasError('maxlength')">email can be maximum 255 characters long</span>
+
+
+
+
+<!-- password-->
+ <label for="password">password</label>
+<input id="text-box1" type="text" formControlName="password" name="password">
+
+<span class="red1" *ngIf="password.invalid && password.touched && password.hasError('required')">password must is required</span>
+<span class="red1" *ngIf="password.invalid && password.touched && password.hasError('minlength')">password must be min 6 characters long</span>
+<span class="red1" *ngIf="password.invalid && password.touched && password.hasError('maxlength')">password can be maximum 255 characters</span>
+
+
+<button class="btn" type="button" (click)="login('home')">login</button>
+</form>
+</div>
+  <!--class for span id red-->
+
+  <!--#usersForm = "ngForm" -->
+
+
+

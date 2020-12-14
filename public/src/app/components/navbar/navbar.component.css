@@ -1,0 +1,13 @@
+.navbar-light .navbar-brand {
+  color: white;
+  font-family: 'Pinyon Script', cursive;
+  font-size:30px;
+}
+.navbar{
+  background-color: maroon;
+}
+
+.nav-item .nav-link{
+  color: aliceblue;
+  letter-spacing: 0.5px;
+}

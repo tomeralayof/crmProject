@@ -1,0 +1,52 @@
+
+
+
+ <header>
+  <app-navbar></app-navbar>
+</header>
+
+
+<main>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 p-0">
+
+<ul class="nav flex-column pt-4">
+  <li *ngFor="let item of navItem">
+    <a class="nav-link text-light"
+    [routerLink] = item.link
+    routerLinkActive="active"
+    >
+      <hr class="hr">
+      <i class="{{item.icon}}"></i>
+
+      <span class="ml-3">{{item.tite}}</span>
+    </a>
+
+  </li>
+
+</ul>
+
+
+<router-outlet></router-outlet>
+
+
+</div>
+</div>
+</div>
+</main>
+
+
+<footer>
+  <h1>copy right</h1>
+</footer>
+
+
+
+
+<a routerLink="/add">add a new customer</a>
+
+
+<app-side-final></app-side-final>

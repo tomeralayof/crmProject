@@ -1,0 +1,64 @@
+@local=http://localhost:3001
+
+POST  {{local}}/api/user
+Content-Type: application/json
+
+{
+"firstName":"tomer",
+"lastName": "alayof",
+"email":"tomer@gmail.com",
+"password":"1234567890",
+"companyName":"hi",
+"checkbox": true
+}
+
+
+###
+POST  {{local}}/api/user/login
+Content-Type: application/json
+
+{
+  "password": "tomeralayof1234567890",
+  "email": "tomeralayof95959@gmail.com"
+}
+
+
+
+###
+POST {{local}}/api/customer
+Content-Type: application/json
+
+{
+  "firstName": "tobvcmer"
+  
+
+}
+
+
+# "lastName": "alayof",
+#   "address": "kalisher 26",
+#   "city": "rishon le zion",
+#   "product": "iphone",
+#   "numberOfProduct": 2,
+#   "amount": 1500,
+#   "total": "3000"
+
+
+###
+GET {{local}}/api/user/check-email/:id
+Content-Type: application/json
+
+{
+  "email": "tomealayof@gmail.com"
+}
+
+
+
+###
+GET {{local}}/api/customer/table
+Content-Type: application/json
+
+
+
+
+

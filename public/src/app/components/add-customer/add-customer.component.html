@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+
+  <h1>Add A New Customer To List</h1>
+  <form [formGroup]="addCustomer">
+
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName  = "firstName">
+      <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('required')">* first name is required</span>
+      <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('minlength')">* first name must be at least 2 characters long</span>
+      <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('maxlength')">* first name must be max 255 characters long</span>
+      <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('pattern')">* first name must be a real name</span>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="lastName">
+      <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('required')">* last name is required</span>
+      <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('minlength')">* last name must me at least 2 characters long</span>
+      <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('maxlength')">* last name must be max 255 characters long</span>
+      <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('pattern')">* last name must be a real name</span>
+    </div>
+
+     <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="address">
+    </div>
+
+     <div class="mb-3">
+      <label for="city" class="form-label">City</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="city">
+    </div>
+
+     <div class="mb-3">
+      <label for="product" class="form-label">Product</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="product">
+    </div>
+
+    <div class="mb-3">
+      <label for="numberOfProducts" class="form-label">Number Of Pieces</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" formControlName="numberOfProduct">
+    </div>
+
+     <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" formControlName="amount">
+    </div>
+
+
+
+    <button [disabled]="!addCustomer.valid" (click)="redirect('/customer/created')" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+
+
+
+<app-side-final></app-side-final>

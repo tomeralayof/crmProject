@@ -1,0 +1,14 @@
+.nav{
+  background-color: rgb(122, 1, 1);
+  box-shadow: 2px 2px 2px 2px black;
+
+}
+
+.hr{
+  background-color: white;
+}
+
+.active{
+  background-color: coral;
+
+}

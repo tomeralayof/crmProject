@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container{
+  width: 800px;
+  height: 10px;
+  margin: 20px auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.formCreateAccount{
+   position: relative;
+  margin: 40px;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-top: 10px;
+  display: inline-block;
+  height: 50px;
+
+}
+
+#red{
+  color: red;
+  font-family: 'Lateef', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+
+}
+
+.header{
+  color: maroon;
+  text-align: left;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: 350;
+
+}
+
+label {
+	cursor: pointer;
+	color: black;
+	display: block;
+  letter-spacing: 4px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 10px;
+
+}
+
+input .ng-touched .ng-invalid{
+  border: 1px solid red;
+}
+
+input:focus {
+     outline: none
+     }
+
+input{
+  border:none;
+  border-bottom: 1px solid #0ad487;
+  padding: 5px 10px;
+  outline: none;
+
+
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-top: 2px;
+}
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-top: 2px;
+}
+
+
+
+.title{
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.btn{
+  margin: 10px;
+  padding: 10px;
+    opacity: 0.8;
+  width: 200px;
+  margin-left: 30%;
+  border: 1px solid maroon;
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin-top: 50px;
+  border-radius: 10px;
+
+
+}
+
+.btn:hover{
+  background-image: linear-gradient(to right, silver,black);
+  opacity: 0.2;
+}
+
+.btn-white{
+  color: gray;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+
+
+
+.red1{
+  color: red;
+  letter-spacing: 1.5px;
+}

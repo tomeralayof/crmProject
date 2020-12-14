@@ -1,0 +1,80 @@
+<app-main-navbar></app-main-navbar>
+<!--form-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<!--form group define the name of the form-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+
+<div id="container">
+<form class="formCreateAccount" #usersForm = "ngForm" autocomplete="off"   [formGroup] = "createAccount" novalidate='true'>
+
+    <div class="title">
+    <h1 class="header">Register Royal System</h1>
+  </div>
+
+  <label for="firstName">First Name :</label>
+  <input id="text-box1" type="text" name="firstName" formControlName  = "firstName">
+
+  <!--first name input-->
+  <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('required')">first name is required</span>
+  <span id="red" *ngIf="firstName.invalid && firstName.touched &&  firstName.hasError('pattern')">first name must be a name,</span>
+  <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('minlength')"> first name must be minimun 2 characters long</span>
+  <span id="red" *ngIf="firstName.invalid && firstName.touched && firstName.hasError('maxlength')">first name can be maximum 250 characteres</span>
+
+
+<!--last name input-->
+  <label for="lastName">Last Name:</label>
+  <input class="ng-error" type="text" name="lastName" formControlName="lastName" >
+
+  <span id="red" *ngIf="lastName.invalid && lastName.touched &&lastName.hasError('required')">* last name is required</span>
+  <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('pattern')">* last name must be a name</span>
+  <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('minlength')">* last name must be at least 2 characters long</span>
+  <span id="red" *ngIf="lastName.invalid && lastName.touched && lastName.hasError('maxlength')">* last name must be maximun 255 characters long</span>
+
+
+<!--email input-->
+  <label for="email">Email:</label>
+  <input class="italic" type="text" name="email" formControlName="email" placeholder="name@example.com">
+
+  <span id="red" *ngIf="email.invalid && email.touched && email.hasError('required')">* email is required</span>
+
+  <span id="red" *ngIf="email.invalid && email.touched && email.hasError('minlength')">* email must contain at least 6 characters</span>
+
+  <span id="red" *ngIf="email.invalid && email.touched && email.hasError('email')">* email must be a valid email</span>
+
+  <span id="red" *ngIf="email.invalid && email.touched && email.hasError('maxlength')">* email must be maximum 255 characters long</span>
+
+  <span id="red" *ngIf="email.invalid && email.touched && email.hasError('exist')">* email is already exist</span>
+
+
+
+
+
+<!--password input-->
+<label for="password">Password:</label>
+<input type="password" name="password" formControlName="password" autocomplete="off">
+<span id="red" *ngIf="password.invalid && password.touched && password.hasError('required')">* password is required</span>
+<span id="red" *ngIf="password.invalid && password.touched && password.hasError('minlength')">* password must be at least 6 characters long</span>
+
+
+<!--company name input-->
+<label for="companyName">company name:</label>
+<input type="text" name="companyName" >
+
+
+<!--agree to terms checkbox-->
+
+<input type="checkbox"  name="checkbox" formControlName="checkbox">
+<span> I agree to<a routerLink = '/api/terms' routerLinkActive="active"> terms of use</a></span>
+
+
+
+<!--submit button-->
+  <button (click)="goToApp('home')" name="submit" class="btn btn-white" type="button" [disabled]="!createAccount.valid">register</button>
+</form>
+</div>
+
+<!-- <app-term-use></app-term-use> -->
+  <!-- (ngSubmit)="onSubmit() -->

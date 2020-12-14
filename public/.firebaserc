@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "royalcrm-tomer": {
+      "hosting": {
+        "royalcrm": [
+          "royalcrm-tomer"
+        ]
+      }
+    }
+  }
+}
